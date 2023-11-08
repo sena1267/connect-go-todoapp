@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package buf.user.v1;
+
+option go_package = "github.com/sena1267/connect-go-todoapp/backend/interfaces/rpc/user/v1;userv1";
+
+service UserService {
+    rpc GetUser(GetUserRequest) returns (GetUserResponse) {}
+}
+
+message User {
+    string id = 1;
+    string email = 2;
+}
+
+message GetUserRequest {
+    string id = 1;
+}
+
+message GetUserResponse {
+    User user = 1;
+}
