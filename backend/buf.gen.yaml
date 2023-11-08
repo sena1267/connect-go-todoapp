@@ -1,0 +1,10 @@
+version: v1
+plugins:
+  - name: go
+    # out: 生成したファイルの出力先
+    out: interfaces
+    # 下記設定で、protoファイルのディレクトリ構造と同じになる
+    opt: paths=source_relative
+  - name: connect-go
+    out: interfaces
+    opt: paths=source_relative
